@@ -15,5 +15,10 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
