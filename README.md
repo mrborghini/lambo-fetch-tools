@@ -1,15 +1,22 @@
-# fetch-tools
+# Lambo fetch tools
 
-To install dependencies:
+This npm package just makes it easier to fetch data and format it how you want it without constantly re-using the same code for parsing data.
 
-```bash
-bun install
-```
-
-To run:
+## Usage
 
 ```bash
-bun run index.ts
+npm install lambo-fetch-tools
 ```
 
-This project was created using `bun init` in bun v1.3.4. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+```ts
+import { fetchJSON } from "lambo-fetch-tools";
+
+interface TestData {
+  message: string;
+}
+
+await fetchJSON<TestData>("https://your-url-here.com");
+await fetchText("https://your-url-here.com");
+await fetchBlob("https://your-url-here.com");
+await fetchBytes("https://your-url-here.com");
+```
